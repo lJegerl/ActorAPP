@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+  <body>
+
+    <h1>Actors list</h1>
+  
+    <table>
+      <tr>
+        <th>Actor FirstName</th>
+        <th>Actor SecondName</th>
+        <th></th>
+      </tr>
+      <tr th:each="s : ${actors}" th:class="${sStat.odd}? 'odd'">
+       
+        <td th:text="${s.firstName}">13 jan 2023</td>
+        <td th:text="${s.secondName}">140000.21</td>
+        <td>
+        </td>
+      </tr>
+    </table>
+
+  
+    <p>
+      <a href="../home.html" th:href="@{/}">Return to home</a>
+    </p>
+    
+  </body>
+  
+</html>
+
